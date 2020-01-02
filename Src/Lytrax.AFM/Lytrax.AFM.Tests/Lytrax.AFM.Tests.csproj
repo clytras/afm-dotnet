@@ -16,6 +16,8 @@
     <RepositoryUrl>https://github.com/clytras/afm-dotnet</RepositoryUrl>
 
     <PackageProjectUrl>https://lytrax.io/blog/projects/greek-tin-validator-generator</PackageProjectUrl>
+
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

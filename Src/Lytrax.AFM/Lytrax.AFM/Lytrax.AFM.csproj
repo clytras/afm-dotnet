@@ -52,11 +52,22 @@
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\..\..\Resources\LytraxAFM_icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
   <PropertyGroup>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>LytraxAFM_icon.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageReleaseNotes>Validate and generate Greek TIN (Tax Identification Number) / AFM (Αριθμός Φορολογικού Μητρώου). Generation function can create valid or invalid numbers including parameters for old format, individuals, legal entities and repet tolerance digits control.</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
