@@ -6,5 +6,5 @@ install:
   - sudo apt-get install -qq dotnet-sdk-2.0.0
 script:
   - dotnet restore ./Src/Lytrax.AFM/
-  - dotnet build ./Src/Lytrax.AFM/
+  - dotnet build -c Release ./Src/Lytrax.AFM/
   - dotnet test ./Src/Lytrax.AFM/Lytrax.AFM.Tests/
