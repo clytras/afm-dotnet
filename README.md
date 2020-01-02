@@ -35,7 +35,7 @@ Validate a number:
 > ValidateAFM.Validate("090000045")
 true
 
-> ValidateAFM.Validate("23456789")
+> ValidateAFM.Validate("123456789")
 false
 ```
 
