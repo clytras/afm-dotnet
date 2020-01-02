@@ -1,6 +1,7 @@
 # Greek TIN/AFM Validator and Generator
 
 [![Linux Build Status](https://img.shields.io/travis/clytras/afm-dotnet.svg?style=flat)](https://travis-ci.org/clytras/afm-dotnet.svg?branch=master)
+[![Linux Build Status](https://img.shields.io/nuget/v/Lytrax.AFM)](https://www.nuget.org/packages/Lytrax.AFM/)
 
 
 Validate and generate Greek TIN (*Tax Identification Number*) / AFM (*Αριθμός Φορολογικού Μητρώου*). Generation function can create valid or invalid numbers including parameters for old format, individuals, legal entities and repet tolerance digits control.
@@ -128,6 +129,10 @@ git clone https://github.com/clytras/afm-dotnet.git && cd afm-dotnet
 ```
 
 Open `Src\Lytrax.AFM\Lytrax.AFM.sln` using [Visual Strudio](https://visualstudio.microsoft.com/vs/community/) and run tests.
+
+## Changelog
+
+See [CHANGELOG](CHANGELOG.md)
 
 ## License
 
