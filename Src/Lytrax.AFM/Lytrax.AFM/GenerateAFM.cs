@@ -1,13 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Lytrax.AFM
 {
+    /// <summary>
+    /// Class with static methods to generate valid or invalid AFM numbers
+    /// </summary>
     public class GenerateAFM
     {
         /// <summary>
-        /// Generates an AFM number based parameters
+        /// Generates an AFM number based on parameters
         /// </summary>
         /// <param name="forceFirstDigit">If specified, overrides all pre99, legalEntity and individual</param>
         /// <param name="pre99">Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0), (if true, overrides both legalEntity and individual)</param>
@@ -62,7 +65,7 @@ namespace Lytrax.AFM
         }
 
         /// <summary>
-        /// Generates a valid AFM number based parameters
+        /// Generates a valid AFM number based on parameters
         /// </summary>
         /// <param name="forceFirstDigit">If specified, overrides all pre99, legalEntity and individual</param>
         /// <param name="pre99">Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0), (if true, overrides both legalEntity and individual)</param>
@@ -82,7 +85,7 @@ namespace Lytrax.AFM
         }
 
         /// <summary>
-        /// Generates an invalid AFM number based parameters
+        /// Generates an invalid AFM number based on parameters
         /// </summary>
         /// <param name="forceFirstDigit">If specified, overrides all pre99, legalEntity and individual</param>
         /// <param name="pre99">Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0), (if true, overrides both legalEntity and individual)</param>

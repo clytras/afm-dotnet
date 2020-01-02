@@ -3,6 +3,9 @@ using System.Text.RegularExpressions;
 
 namespace Lytrax.AFM
 {
+    /// <summary>
+    /// Class with static and instance methods to validate AFM numbers
+    /// </summary>
     public class ValidateAFM
     {
         /// <summary>
@@ -80,7 +83,7 @@ namespace Lytrax.AFM
         public bool Valid { get; private set; } = false;
 
         /// <value>A string result indicating the error if the current number the class object is invalid.
-        /// It can be "length" or "nan" or "zero" or "invalid"</value>
+        /// It can be empty or "length" or "nan" or "zero" or "invalid"</value>
         public string Error { get; private set; }
     }
 
