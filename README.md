@@ -131,8 +131,8 @@ Open `Src\Lytrax.AFM\Lytrax.AFM.sln` using [Visual Strudio](https://visualstudio
 
 ## Changelog
 
-See [CHANGELOG](CHANGELOG.md)
+See [CHANGELOG](https://github.com/clytras/afm-dotnet/blob/master/CHANGELOG.md)
 
 ## License
 
-MIT License - see the [LICENSE](LICENSE) file for details
+MIT License - see the [LICENSE](https://github.com/clytras/afm-dotnet/blob/master/LICENSE) file for details
