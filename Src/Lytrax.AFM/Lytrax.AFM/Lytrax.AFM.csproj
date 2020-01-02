@@ -67,7 +67,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>LytraxAFM_icon.png</PackageIcon>
     <PackageIconUrl />
-    <PackageReleaseNotes>Validate and generate Greek TIN (Tax Identification Number) / AFM (Αριθμός Φορολογικού Μητρώου). Generation function can create valid or invalid numbers including parameters for old format, individuals, legal entities and repet tolerance digits control.</PackageReleaseNotes>
+    <PackageReleaseNotes>Validate and generate Greek TIN (Tax Identification Number) / AFM (Αριθμός Φορολογικού Μητρώου). Generation function can create valid or invalid numbers including parameters for old format, individuals, legal entities and repet tolerance digits control.
+
+v1.0.1: FIX: Seed random int generator with a random GUID hash code</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>

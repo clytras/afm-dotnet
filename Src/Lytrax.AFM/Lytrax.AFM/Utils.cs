@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
+using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("Lytrax.AFM.Tests")]
 
@@ -12,7 +13,7 @@ namespace Lytrax.AFM
             int? notEqual = null
         )
         {
-            System.Random rnd = new System.Random();
+            System.Random rnd = new System.Random(Guid.NewGuid().GetHashCode());
             int result;
 
             do
