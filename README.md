@@ -59,18 +59,13 @@ Class **ValidateAFM**
 * **Validate** *static boolean function*
   * `afm: string` - A number to be checked
   * **Returns**: `bool` - A boolean result indicating the validation of the number
-
 * **ValidateExtended** *static `ValidateAFMExtendedResult` function*
   * `afm: string` - A number to be checked
   * **Returns**: `ValidateAFMExtendedResult` - Result indicating the validation of the number
-
 * **constructor** *instantiates a new `ValidateAFM` object*
   * `afm: string` - A number to be checked
-
 * **Number** *string property* - The current AFM number the class object contains
-
 * **Valid** *bool property* - A boolean result indicating the validation of the current number the class object contains
-
 * **Error** *string property* - A string result indicating the error if the current number the class object is invalid.<br/>
 It can be empty or `"length"` or `"nan"` or `"zero"` or `"invalid"`
 
