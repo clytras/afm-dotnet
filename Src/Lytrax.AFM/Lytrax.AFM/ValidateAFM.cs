@@ -87,6 +87,9 @@ namespace Lytrax.AFM
         public string Error { get; private set; }
     }
 
+    /// <summary>
+    /// Class for returning an extended validation result
+    /// </summary>
     public class ValidateAFMExtendedResult
     {
         /// <summary>
