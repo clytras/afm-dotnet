@@ -7,26 +7,21 @@ namespace Lytrax.AFM.Tests
     [TestClass]
     public class TestValidation
     {
-        private readonly string MessageNotValidated = "Validate does not validate valid number (number = {0})";
-        private readonly string MessageClassInstanceNotEqualNumber = "ValidateAFM class instance Number not equal number (.Number = {0}, number = {1})";
-        private readonly string MessageClassInstanceErrorShouldBe = "ValidateAFM class instance Error should be \"{0}\" (.Error = \"{1}\")";
-        private readonly string MessageNotInvalidated = "Validate does not invalidate invalid number (number = {0})";
-
         [TestMethod]
         public void TestValidateValidAfmNumbers()
         {
             foreach(string afm in Helpers.StaticValidNumbers)
             {
                 bool result = ValidateAFM.Validate(afm);
-                Assert.IsTrue(result, string.Format(MessageNotValidated, afm));
+                Assert.IsTrue(result, string.Format(Messages.MessageNotValidated, afm));
 
                 var validator = new ValidateAFM(afm);
                 Assert.IsTrue(validator.Valid, 
-                    string.Format(MessageNotValidated, afm));
+                    string.Format(Messages.MessageNotValidated, afm));
                 Assert.AreEqual(validator.Number, afm, 
-                    string.Format(MessageClassInstanceNotEqualNumber, validator.Number, afm));
+                    string.Format(Messages.MessageClassInstanceNotEqualNumber, validator.Number, afm));
                 Assert.AreEqual(validator.Error, "", 
-                    string.Format(MessageClassInstanceErrorShouldBe, "", validator.Error));
+                    string.Format(Messages.MessageClassInstanceErrorShouldBe, "", validator.Error));
             }
         }
 
@@ -36,13 +31,13 @@ namespace Lytrax.AFM.Tests
             foreach (string afm in Helpers.StaticInvalidNumbers)
             {
                 bool result = ValidateAFM.Validate(afm);
-                Assert.IsFalse(result, string.Format(MessageNotInvalidated, afm));
+                Assert.IsFalse(result, string.Format(Messages.MessageNotInvalidated, afm));
 
                 var validator = new ValidateAFM(afm);
                 Assert.IsFalse(validator.Valid,
-                    string.Format(MessageNotInvalidated, afm));
+                    string.Format(Messages.MessageNotInvalidated, afm));
                 Assert.AreEqual(validator.Error, "invalid",
-                    string.Format(MessageClassInstanceErrorShouldBe, "invalid", validator.Error));
+                    string.Format(Messages.MessageClassInstanceErrorShouldBe, "invalid", validator.Error));
             }
         }
 
@@ -51,13 +46,13 @@ namespace Lytrax.AFM.Tests
         {
             string afm = Helpers.InvalidErrors["length"];
             bool result = ValidateAFM.Validate(afm);
-            Assert.IsFalse(result, string.Format(MessageNotInvalidated, afm));
+            Assert.IsFalse(result, string.Format(Messages.MessageNotInvalidated, afm));
 
             var validator = new ValidateAFM(afm);
             Assert.IsFalse(validator.Valid,
-                string.Format(MessageNotInvalidated, afm));
+                string.Format(Messages.MessageNotInvalidated, afm));
             Assert.AreEqual(validator.Error, "length",
-                string.Format(MessageClassInstanceErrorShouldBe, "length", validator.Error));
+                string.Format(Messages.MessageClassInstanceErrorShouldBe, "length", validator.Error));
         }
 
         [TestMethod]
@@ -65,13 +60,13 @@ namespace Lytrax.AFM.Tests
         {
             string afm = Helpers.InvalidErrors["nan"];
             bool result = ValidateAFM.Validate(afm);
-            Assert.IsFalse(result, string.Format(MessageNotInvalidated, afm));
+            Assert.IsFalse(result, string.Format(Messages.MessageNotInvalidated, afm));
 
             var validator = new ValidateAFM(afm);
             Assert.IsFalse(validator.Valid,
-                string.Format(MessageNotInvalidated, afm));
+                string.Format(Messages.MessageNotInvalidated, afm));
             Assert.AreEqual(validator.Error, "nan",
-                string.Format(MessageClassInstanceErrorShouldBe, "nan", validator.Error));
+                string.Format(Messages.MessageClassInstanceErrorShouldBe, "nan", validator.Error));
         }
 
         [TestMethod]
@@ -79,13 +74,13 @@ namespace Lytrax.AFM.Tests
         {
             string afm = Helpers.InvalidErrors["zero"];
             bool result = ValidateAFM.Validate(afm);
-            Assert.IsFalse(result, string.Format(MessageNotInvalidated, afm));
+            Assert.IsFalse(result, string.Format(Messages.MessageNotInvalidated, afm));
 
             var validator = new ValidateAFM(afm);
             Assert.IsFalse(validator.Valid,
-                string.Format(MessageNotInvalidated, afm));
+                string.Format(Messages.MessageNotInvalidated, afm));
             Assert.AreEqual(validator.Error, "zero",
-                string.Format(MessageClassInstanceErrorShouldBe, "zero", validator.Error));
+                string.Format(Messages.MessageClassInstanceErrorShouldBe, "zero", validator.Error));
         }
 
         [TestMethod]
@@ -93,13 +88,13 @@ namespace Lytrax.AFM.Tests
         {
             string afm = Helpers.InvalidErrors["invalid"];
             bool result = ValidateAFM.Validate(afm);
-            Assert.IsFalse(result, string.Format(MessageNotInvalidated, afm));
+            Assert.IsFalse(result, string.Format(Messages.MessageNotInvalidated, afm));
 
             var validator = new ValidateAFM(afm);
             Assert.IsFalse(validator.Valid,
-                string.Format(MessageNotInvalidated, afm));
+                string.Format(Messages.MessageNotInvalidated, afm));
             Assert.AreEqual(validator.Error, "invalid",
-                string.Format(MessageClassInstanceErrorShouldBe, "invalid", validator.Error));
+                string.Format(Messages.MessageClassInstanceErrorShouldBe, "invalid", validator.Error));
         }
     }
 }

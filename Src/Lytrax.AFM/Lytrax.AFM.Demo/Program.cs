@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Linq;
-
-using Lytrax.AFM;
 
 namespace Lytrax.AFM.Demo
 {

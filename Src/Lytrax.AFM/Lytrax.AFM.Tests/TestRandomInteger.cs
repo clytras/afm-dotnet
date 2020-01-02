@@ -14,7 +14,7 @@ namespace Lytrax.AFM.Tests
             {
                 int value = Utils.GetRandomInt(0, 9);
                 Assert.IsTrue(value >= 0 && value <= 9,
-                    string.Format(Helpers.MessageNotBetween, value));
+                    string.Format(Messages.MessageNotBetween, value));
             }
         }
 
@@ -29,9 +29,9 @@ namespace Lytrax.AFM.Tests
                 {
                     int value = Utils.GetRandomInt(0, 9, notEqual);
                     Assert.IsTrue(value >= 0 && value <= 9,
-                        string.Format(Helpers.MessageNotBetween, value));
+                        string.Format(Messages.MessageNotBetween, value));
                     Assert.AreNotEqual(notEqual, value,
-                        string.Format(Helpers.MessageFailNotEqual, value, notEqual));
+                        string.Format(Messages.MessageFailNotEqual, value, notEqual));
                 }
             }
         }

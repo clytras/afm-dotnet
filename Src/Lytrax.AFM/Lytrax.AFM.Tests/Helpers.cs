@@ -27,12 +27,5 @@ namespace Lytrax.AFM.Tests
             ["zero"] = "000000000",
             ["invalid"] = "123456789"
         };
-
-        public static readonly string MessageNotBetween = "GetRandomInt return an int not between 0 and 9 (returned = {0})";
-        public static readonly string MessageFailNotEqual = "GetRandomInt return an int equal to notEqual (returned = {0}, notEqual = {1})";
-        public static readonly string MessageNotValidated = "Validate does not validate valid number (number = {0})";
-        public static readonly string MessageNotInvalidated = "Validate does not invalidate invalid number (number = {0})";
-        public static readonly string MessageClassInstanceNotEqualNumber = "ValidateAFM class instance Number not equal number (.Number = {0}, number = {1})";
-        public static readonly string MessageClassInstanceErrorShouldBe = "ValidateAFM class instance Error should be \"{0}\" (.Error = \"{1}\")";
     }
 }
