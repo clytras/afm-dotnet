@@ -13,7 +13,7 @@ https://lytrax.io/blog/projects/greek-tin-validator-generator
 
 Using [NuGet Package Manager Console](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-powershell):
 
-```ps
+```powershell
 # Add the Lytrax.AFM package to the default project as specified in the console's project selector
 Install-Package Lytrax.AFM
 
