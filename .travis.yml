@@ -3,6 +3,8 @@ mono: 5.2.0
 dotnet: 3.1.100
 install:
   - sudo apt-get install -qq dotnet-sdk-2.0.0
+  # workaround for missing .net 4.5 targing pack
+  - export FrameworkPathOverride=$(dirname $(which mono))/../lib/mono/4.5/
 script:
   - dotnet restore ./Src/Lytrax.AFM/
   - dotnet build -c Release ./Src/Lytrax.AFM/
