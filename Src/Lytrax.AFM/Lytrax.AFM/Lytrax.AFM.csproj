@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Christos Lytras</Authors>
+    <Company>LytraX</Company>
+    <Description>Greek AFM (TIN) Validator and Generator</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://lytrax.io/blog/projects/greek-tin-validator-generator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/clytras/afm-dotnet</RepositoryUrl>
+    <PackageTags>greek tin afm validator generator</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

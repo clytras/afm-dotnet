@@ -3,6 +3,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Christos Lytras</Authors>
+    <Company>Lytrax</Company>
+    <Description>Greek AFM (TIN) Validator and Generator Demo</Description>
+    <RepositoryUrl>https://lytrax.io/blog/projects/greek-tin-validator-generator</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

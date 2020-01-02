@@ -4,6 +4,18 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <Authors>Christos Lytras</Authors>
+
+    <Company>Lytrax</Company>
+
+    <Description>Greek AFM (TIN) Validator and Generator Tests</Description>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <RepositoryUrl>https://github.com/clytras/afm-dotnet</RepositoryUrl>
+
+    <PackageProjectUrl>https://lytrax.io/blog/projects/greek-tin-validator-generator</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
