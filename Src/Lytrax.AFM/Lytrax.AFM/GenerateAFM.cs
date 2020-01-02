@@ -1,29 +1,22 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Lytrax.AFM
 {
-    class GenerateAFM
+    public class GenerateAFM
     {
-        GenerateAFM(
-            int? forceFirstDigit = null,
-            bool pre99 = false,
-            bool individual = false,
-            bool legalEntity = false,
-            int? repeatTolerance = null,
-            bool valid = true
-        )
-        {
-            ForceFirstDigit = forceFirstDigit;
-            Pre99 = pre99;
-            Individual = individual;
-            LegalEntity = legalEntity;
-            RepeatTolerance = repeatTolerance;
-            Valid = valid;
-        }
-
-        public static string GenerateStatic(
+        /// <summary>
+        /// Generates an AFM number based parameters
+        /// </summary>
+        /// <param name="forceFirstDigit">If specified, overrides all pre99, legalEntity and individual</param>
+        /// <param name="pre99">Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0), (if true, overrides both legalEntity and individual)</param>
+        /// <param name="individual">Φυσικά πρόσωπα, (ξεκινάει με 1-4)</param>
+        /// <param name="legalEntity">Νομικές οντότητες (ξεκινάει με 7-9)</param>
+        /// <param name="repeatTolerance">Number for max repeat tolerance (0 for no repeats, unspecified for no check)</param>
+        /// <param name="valid">Generate valid or invalid AFM</param>
+        /// <returns>A valid or invalid 9 digit AFM number</returns>
+        public static string Generate(
             int? forceFirstDigit = null,
             bool pre99 = false,
             bool individual = false,
@@ -63,16 +56,49 @@ namespace Lytrax.AFM
 
             int validator = sum % 11;
             int d9Valid = validator >= 10 ? 0 : validator;
-            int d9 = valid ? d9Valid : Utils.GetRandomInt(0, 0, (int?)d9Valid);
+            int d9 = valid ? d9Valid : Utils.GetRandomInt(0, 9, (int?)d9Valid);
 
             return body + d9;
         }
 
-        public int? ForceFirstDigit { get; set; }
-        public bool Pre99 { get; set; }
-        public bool Individual { get; set; }
-        public bool LegalEntity { get; set; }
-        public int? RepeatTolerance { get; set; }
-        public bool Valid { get; set; }
+        /// <summary>
+        /// Generates a valid AFM number based parameters
+        /// </summary>
+        /// <param name="forceFirstDigit">If specified, overrides all pre99, legalEntity and individual</param>
+        /// <param name="pre99">Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0), (if true, overrides both legalEntity and individual)</param>
+        /// <param name="individual">Φυσικά πρόσωπα, (ξεκινάει με 1-4)</param>
+        /// <param name="legalEntity">Νομικές οντότητες (ξεκινάει με 7-9)</param>
+        /// <param name="repeatTolerance">Number for max repeat tolerance (0 for no repeats, unspecified for no check)</param>
+        /// <returns>A valid 9 digit AFM number</returns>
+        public static string GenerateValid(
+            int? forceFirstDigit = null,
+            bool pre99 = false,
+            bool individual = false,
+            bool legalEntity = false,
+            int? repeatTolerance = null
+        )
+        {
+            return Generate(forceFirstDigit, pre99, individual, legalEntity, repeatTolerance, true);
+        }
+
+        /// <summary>
+        /// Generates an invalid AFM number based parameters
+        /// </summary>
+        /// <param name="forceFirstDigit">If specified, overrides all pre99, legalEntity and individual</param>
+        /// <param name="pre99">Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0), (if true, overrides both legalEntity and individual)</param>
+        /// <param name="individual">Φυσικά πρόσωπα, (ξεκινάει με 1-4)</param>
+        /// <param name="legalEntity">Νομικές οντότητες (ξεκινάει με 7-9)</param>
+        /// <param name="repeatTolerance">Number for max repeat tolerance (0 for no repeats, unspecified for no check)</param>
+        /// <returns>An invalid 9 digit AFM number</returns>
+        public static string GenerateInvalid(
+            int? forceFirstDigit = null,
+            bool pre99 = false,
+            bool individual = false,
+            bool legalEntity = false,
+            int? repeatTolerance = null
+        )
+        {
+            return Generate(forceFirstDigit, pre99, individual, legalEntity, repeatTolerance, false);
+        }
     }
 }

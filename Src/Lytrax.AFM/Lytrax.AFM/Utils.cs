@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿#if DEBUG
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Lytrax.AFM.Tests")]
+#endif
 
 namespace Lytrax.AFM
 {
