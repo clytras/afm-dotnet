@@ -18,6 +18,8 @@
     <PackageProjectUrl>https://lytrax.io/blog/projects/greek-tin-validator-generator</PackageProjectUrl>
 
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

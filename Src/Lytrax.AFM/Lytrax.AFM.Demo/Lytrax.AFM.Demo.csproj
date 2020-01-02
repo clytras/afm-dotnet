@@ -8,6 +8,7 @@
     <Description>Greek AFM (TIN) Validator and Generator Demo</Description>
     <RepositoryUrl>https://lytrax.io/blog/projects/greek-tin-validator-generator</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
