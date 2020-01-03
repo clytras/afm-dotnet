@@ -30,11 +30,9 @@ namespace Lytrax.AFM.Tests
         [TestMethod]
         public void TestForceFirstDigit()
         {
-            int[] digits = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
             for (int i = 0; i < Helpers.Iterations; i++)
             {
-                foreach(int forceFirstDigit in digits)
+                for(int forceFirstDigit = 0; forceFirstDigit <= 9; forceFirstDigit++)
                 {
                     string value = GenerateAFM.Generate(forceFirstDigit: forceFirstDigit);
                     bool valid = ValidateAFM.Validate(value);
@@ -106,7 +104,7 @@ namespace Lytrax.AFM.Tests
                     string.Format(Messages.MessageFirstDigitNotMatch, expectedFirstDigit, firstDigit, value));
 
                 string valueValid = GenerateAFM.GenerateValid(individual: true);
-                bool validValid = ValidateAFM.Validate(value);
+                bool validValid = ValidateAFM.Validate(valueValid);
                 string firstDigitValid = valueValid[0].ToString();
                 Assert.IsTrue(validValid, string.Format(Messages.MessageNotValidated, valueValid));
                 Assert.IsTrue(re.IsMatch(firstDigitValid),
