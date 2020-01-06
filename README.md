@@ -1,6 +1,6 @@
 # Greek TIN/AFM Validator and Generator
 
-[![Linux Build Status](https://img.shields.io/travis/clytras/afm-dotnet.svg?style=flat)](https://travis-ci.org/clytras/afm-dotnet.svg?branch=master)
+[![Linux Build Status](https://img.shields.io/travis/clytras/afm-dotnet.svg?style=flat)](https://travis-ci.org/clytras/afm-dotnet?branch=master) [![Nuget](https://img.shields.io/nuget/v/Lytrax.AFM)](https://www.nuget.org/packages/Lytrax.AFM/)
 
 ![Logo](https://github.com/clytras/afm-dotnet/raw/master/Resources/LytraxAFM_icon.png)
 

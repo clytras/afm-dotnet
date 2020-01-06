@@ -14,7 +14,7 @@ namespace Lytrax.AFM
         /// </summary>
         /// <param name="forceFirstDigit">If specified, overrides all pre99, legalEntity and individual</param>
         /// <param name="pre99">Για ΑΦΜ πριν από 1/1/1999 (ξεκινάει με 0), (if true, overrides both legalEntity and individual)</param>
-        /// <param name="individual">Φυσικά πρόσωπα, (ξεκινάει με 1-4)</param>
+        /// <param name="individual">Φυσικά πρόσωπα (ξεκινάει με 1-4)</param>
         /// <param name="legalEntity">Νομικές οντότητες (ξεκινάει με 7-9)</param>
         /// <param name="repeatTolerance">Number for max repeat tolerance (0 for no repeats, unspecified for no check)</param>
         /// <param name="valid">Generate valid or invalid AFM</param>
@@ -58,7 +58,7 @@ namespace Lytrax.AFM
             }
 
             int validator = sum % 11;
-            int d9Valid = validator >= 10 ? 0 : validator;
+            int d9Valid = validator % 10;
             int d9 = valid ? d9Valid : Utils.GetRandomInt(0, 9, (int?)d9Valid);
 
             return body + d9;
