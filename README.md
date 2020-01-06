@@ -130,6 +130,8 @@ git clone https://github.com/clytras/afm-dotnet.git && cd afm-dotnet
 
 Open `Src\Lytrax.AFM\Lytrax.AFM.sln` using [Visual Strudio](https://visualstudio.microsoft.com/vs/community/) and run tests.
 
+To run Demo, run console application `Lytrax.AFM.Demo`.
+
 ## Changelog
 
 See [CHANGELOG](https://github.com/clytras/afm-dotnet/blob/master/CHANGELOG.md)
